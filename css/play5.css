@@ -424,7 +424,7 @@
 }
 
 .main_news .news02 {
-    padding: 300px 0;
+    padding: 200px 0;
 }
 
 .main_news .news02 .txt h2 {
@@ -482,12 +482,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    
 }
 
 .main_news .news03 .news_img .img img{
-    height: 100%;
-    border-radius: 50px;
+    height: 80%;
+    border-radius: 25px;
     margin: 0 0 20px 0;
 }
 
@@ -501,13 +500,25 @@
 }
 
 .main_news .news04 {
-    padding: 300px 0;
+    position: relative;
 }
 
 .main_news .news04 .inner {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    max-width: 1600px;
+    width: 1600px;
+    padding: 0 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_news .news04 .txt {
+    position: relative;
 }
 
 .main_news .news04 .txt img {
@@ -543,6 +554,10 @@
     background: #121314;
 }
 
+.main_launch .inner {
+    position: relative;
+}
+
 .main_launch .l_slide .tit h2 {
     font-size: 40px;
     font-weight: 500;
@@ -565,6 +580,7 @@
 
 .main_launch .game_box .game figure {
     width: 100%;
+    height: 85%;
 }
 
 .main_launch .game_box .game figure img {
@@ -583,9 +599,44 @@
    overflow: hidden;
 }
 
+.main_launch .l_btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 999;
+
+    display: flex;
+    gap: 15px;
+}
+
+.main_launch .l_btn i {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    padding: 15px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .main_look {
     padding: 100px 0;
 }
+
+/* .main_look::before {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 1570px;
+    height: 1px;
+    background: #ddd;
+} */
 
 .main_look .tit {
     text-align: center;
@@ -645,6 +696,7 @@
 
 .main_store {
     padding: 100px 0;
+    background: #f9f9f9;
 }
 
 .main_store .inner {
@@ -693,6 +745,7 @@
 
 .main_lanews {
     padding: 100px 0;
+    position: relative;
 }
 
 .main_lanews h2 {
@@ -703,8 +756,13 @@
     margin: 0 0 50px 0;
 }
 
+.main_lanews .ln_slide {
+   
+}
+
 .main_lanews .ln_slide .lanews {
     padding: 15px;
+    height: 100%;
 }
 
 .main_lanews .ln_slide .lanews .container{
@@ -729,6 +787,8 @@
     color: #222;
     line-height: 25px;
     margin: 0 0 10px 0;
+
+    min-height: 48px;
 }
 
 .main_lanews .ln_slide .lanews .container .txt p {
@@ -770,6 +830,32 @@
     font-size: 14px;
     font-weight: 300;
     color: #222;
+}
+
+.main_lanews .ln_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1680px;
+    width: 100%;
+    z-index: 998;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_lanews .ln_btn i {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: #0070cc;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .main_media {
@@ -1000,4 +1086,20 @@
     width: 1px;
     height: 10px;
     background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        position: relative;
+    }
+
+    .header {
+        position: absolute;
+        background: #fff;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }

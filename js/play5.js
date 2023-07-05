@@ -78,6 +78,15 @@ $(function () {
 
     $('.l_slide').slick({
         arrows: false,
+        draggable: false,
+    })
+
+    $('.main_launch .l_btn .left').on('click', function () {
+        $('.l_slide').slick('slickPrev')
+    })
+
+    $('.main_launch .l_btn .right').on('click', function () {
+        $('.l_slide').slick('slickNext')
     })
 
     $('.ln_slide').slick({
@@ -86,5 +95,12 @@ $(function () {
         centerPadding: '125px',
         slidesToShow: 3,
         dots: true,
+    })
+
+    $('.main_lanews .ln_btn .left').on('click', function () {
+        $('.ln_slide').slick('slickPrev')
+    })
+    $('.main_lanews .ln_btn .right').on('click', function () {
+        $('.ln_slide').slick('slickNext')
     })
 })
