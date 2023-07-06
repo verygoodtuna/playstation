@@ -1,7 +1,18 @@
+* {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
 .inner {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.header {
+    border-bottom: 1px solid transparent;
 }
 
 .header .h_top {
@@ -47,6 +58,11 @@
     color: #222;
 
     position: relative;
+    cursor: pointer;
+}
+
+.header .h_bottom .gnb>li:hover {
+    color: #0070cc;
 }
 
 .header .h_bottom .gnb>li i {
@@ -56,7 +72,7 @@
 .header .h_bottom .lnb {
     background: #fff;
     position: absolute;
-    top: 50px;
+    top: 61px;
     left: 0;
     right: 0;
     z-index: 999;
@@ -99,9 +115,13 @@
     height: 1px;
     background: #ddd;
 } */
+.header .h_bottom .lnb .l_top>li {
+    height: 100%;
+}
 
 .header .h_bottom .lnb .l_top>li img {
     margin: 0 0 10px 0;
+    height: 76px;
 }
 
 .header .h_bottom .lnb .l_top>li span{
@@ -196,11 +216,29 @@
 
 .header .h_bottom .customer strong {
     background: #0070cc;
-    padding: 8px 20px;
+    padding: 10px 25px;
     border-radius: 50px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+}
+
+.header .h_bottom .customer input {
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    width: 150px;
+    height: 34px;
+    text-align: center;
+}
+
+.header .h_bottom .customer input:focus {
+    outline: none;
+}
+
+.header .h_bottom .customer::placeholder {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
 }
 
 .main_game .itm {
@@ -215,16 +253,16 @@
     background: url(../imges/ms_street.webp)no-repeat center center/cover;
 }
 .main_game .itm03 {
-    background: url(../imges/ms_avatar.webp)no-repeat center center/cover;
+    background: url(../imges/ms_sy.webp)no-repeat center center/cover;
 }
 .main_game .itm04 {
-    background: url(../imges/ms_season04.webp)no-repeat center center/cover;
+    background: url(../imges/ms_avatar.webp)no-repeat center center/cover;
 }
 .main_game .itm05 {
-    background: url(../imges/ms_battle.webp)no-repeat center center/cover;
+    background: url(../imges/ms_season04.webp)no-repeat center center/cover;
 }
 .main_game .itm06 {
-    background: url(../imges/ms_gow.webp)no-repeat center center/cover;
+    background: url(../imges/ms_battle.webp)no-repeat center center/cover;
 }
 
 
@@ -240,24 +278,51 @@
     transform: translate(-50%, -50%);
 }
 
-
 .main_game .itm .txt img {
     height: 150px;
     margin: 0 0 20px 0;
+}
+
+.main_game .itm .txt strong {
+    display: block;
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 25px;
+    color: #fff;
+    margin: 0 0 30px 0;
+
+    position: relative;
+}
+
+.main_game .itm .txt strong::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+
+    width: 410px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .main_game .itm .txt h2 {
     font-size: 40px;
     font-weight: 400;
     color: #fff;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
+
+    text-shadow: 0 0 5px #7c7c7c;
 }
 
 .main_game .itm .txt p {
     font-size: 16px;
     font-weight: 300;
+    line-height: 22px;
     color: #fff;
     margin: 0 0 80px 0;
+
+    text-shadow: 0 0 5px #7c7c7c;
 }
 
 .main_game .itm .txt span {
@@ -290,10 +355,6 @@
     border-radius: 10px;
 }
 
-.main_news .news {
-    min-height: 300px;
-}
-
 .main_product {
     padding: 100px 0;
 }
@@ -318,7 +379,7 @@
 }
 
 .main_product .itm .txt p {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     color: #222;
     margin: 0 0 70px 0;
@@ -367,7 +428,7 @@
 }
 
 .main_news .news {
-    /* height: 500px; */
+    min-height: 300px;
 }
 
 .main_news .news01 {
@@ -392,10 +453,6 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
-
-.main_news .news01 .txt h2 {
-    
 }
 
 .main_news .news01 .txt h2 img {
@@ -437,6 +494,7 @@
 .main_news .news02 .txt p {
     font-size: 16px;
     font-weight: 300;
+    line-height: 26px;
     color: #fff;
 }
 
@@ -458,7 +516,7 @@
 }
 
 .main_news .news03 .txt p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     color: #fff;
     margin: 0 0 50px 0;
@@ -471,7 +529,7 @@
 
 .main_news .news03 .txt span a{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     color: #222;
     background: #fff;
     border-radius: 50px;
@@ -527,15 +585,15 @@
 }
 
 .main_news .news04 .txt h2{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     color: #fff;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 .main_news .news04 .txt p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     color: #fff;
     margin: 0 0 50px 0;
 }
@@ -588,6 +646,11 @@
     width: 100%;
     border-radius: 25px;
     margin: 0 0 20px 0;
+    transition: 0.3s;
+}
+
+.main_launch .game_box .game:hover figure img {
+    transform: scale(1.02);
 }
 
 .main_launch .game_box .game figure figcaption {
@@ -596,6 +659,9 @@
    font-size: 16px;
    font-weight: 300;
    height: 15px;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
    overflow: hidden;
 }
 
@@ -651,7 +717,7 @@
 }
 
 .main_look .tit p {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     color: #222;
 }
@@ -676,23 +742,57 @@
     font-weight: 400;
     color: #222;
     margin: 0 0 10px 0;
+    text-align: center;
 }
 
 .main_look .look .itm p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     color: #222;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
+    text-align: center;
 }
 
 .main_look .look .itm span {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+
+.main_look .look .itm span a{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
     background: #0070cc;
     padding: 10px 25px;
-    border-radius: 25px;
+    border-radius: 50px;
 }
+
+.main_look .look .itm span a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 110px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50px;
+    outline: 2px solid #0070ccbb;
+
+    z-index: 1;
+
+    transition: 0.2s;
+}
+
+.main_look .look .itm span a:hover::before {
+    content: "";
+    width: 125px;
+    height: 40px;
+}
+  
 
 .main_store {
     padding: 100px 0;
@@ -737,6 +837,32 @@
     background: #0070cc;
     padding: 10px 25px;
     border-radius: 50px;
+
+    position: relative;
+}
+
+.main_store .txt span a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 160px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50px;
+    outline: 2px solid #0070ccbb;
+
+    z-index: 1;
+
+    transition: 0.2s;
+}
+
+.main_store .txt span a:hover::before {
+    content: "";
+    width: 170px;
+    height: 45px;
 }
 
 .main_store figure img{
@@ -756,8 +882,35 @@
     margin: 0 0 50px 0;
 }
 
-.main_lanews .ln_slide {
-   
+.main_lanews .ln_slide .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    cursor: pointer;
+}
+
+.main_lanews .ln_slide .slick-dots>li {
+    position: relative;
+    /* padding: 20px 0; */
+}
+
+.main_lanews .ln_slide .slick-dots>li button {
+    width: 20px;
+    height: 5px;
+    background: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 5px;
+
+    border: none;
+    outline: none;
+    font-size: 0;
+}
+
+.main_lanews .ln_slide .slick-dots>li.slick-active button {
+    width: 20px;
+    height: 5px;
+    background: #0070cc;
 }
 
 .main_lanews .ln_slide .lanews {
@@ -845,6 +998,7 @@
 
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .main_lanews .ln_btn i {
@@ -868,10 +1022,10 @@
 }
 
 .main_media .sns h2 {
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 400;
     color: #222;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
 }
 
 .main_media .sns ul {
@@ -882,10 +1036,10 @@
 }
 
 .main_media .sns ul>li i {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
-    padding: 25px;
-    border-radius: 25px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .main_media .sns ul>li .kt {
@@ -961,7 +1115,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
-    color: #fff;
+    color: #f9f9f9;
     margin: 0 0 50px 0;
 
     position: relative;
@@ -986,13 +1140,24 @@
 }
 
 .footer .announcement ul>li {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 22px;
+}
+
+.footer .announcement ul>li .sns {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px 0;
+}
+
+.footer .announcement ul>li .sns>li i{
+    font-size: 30px;
+    font-weight: 300;
 }
 
 .footer .company {
-    color: #fff;
+    color: #f9f9f9;
 }
 
 .footer .company img{
@@ -1001,7 +1166,7 @@
 }
 
 .footer .company .copy {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
     margin: 0 0 20px 0;
 }
@@ -1025,7 +1190,7 @@
 }
 
 .footer .company .address>li {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
     line-height: 20px;
 }

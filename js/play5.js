@@ -34,19 +34,19 @@ $(function () {
     $('.main_gameban .g_con .street').on('click', function () {
         $('.g_slide').slick('slickGoTo', 1)
     })
-    $('.main_gameban .g_con .avatar').on('click', function () {
+    $('.main_gameban .g_con .gow').on('click', function () {
         $('.g_slide').slick('slickGoTo', 2)
     })
-    $('.main_gameban .g_con .season04').on('click', function () {
+    $('.main_gameban .g_con .avatar').on('click', function () {
         $('.g_slide').slick('slickGoTo', 3)
     })
-    $('.main_gameban .g_con .battle').on('click', function () {
+    $('.main_gameban .g_con .season04').on('click', function () {
         $('.g_slide').slick('slickGoTo', 4)
     })
-    $('.main_gameban .g_con .gow').on('click', function () {
+    $('.main_gameban .g_con .battle').on('click', function () {
         $('.g_slide').slick('slickGoTo', 5)
     })
-
+   
     $('.p_slide').slick({
         arrows: false,
         fade: true,
@@ -78,6 +78,7 @@ $(function () {
 
     $('.l_slide').slick({
         arrows: false,
+        fade: true,
         draggable: false,
     })
 
