@@ -28,24 +28,26 @@ $(function () {
         fade: true,
     })
 
-    $('.main_gameban .g_con .ffiv').on('click', function () {
-        $('.g_slide').slick('slickGoTo', 0)
+    $('.main_gameban .g_con .con').on('click', function () {
+        var idx = $(this).index();
+        $('.g_slide').slick('slickGoTo', idx)
     })
-    $('.main_gameban .g_con .street').on('click', function () {
-        $('.g_slide').slick('slickGoTo', 1)
-    })
-    $('.main_gameban .g_con .gow').on('click', function () {
-        $('.g_slide').slick('slickGoTo', 2)
-    })
-    $('.main_gameban .g_con .avatar').on('click', function () {
-        $('.g_slide').slick('slickGoTo', 3)
-    })
-    $('.main_gameban .g_con .season04').on('click', function () {
-        $('.g_slide').slick('slickGoTo', 4)
-    })
-    $('.main_gameban .g_con .battle').on('click', function () {
-        $('.g_slide').slick('slickGoTo', 5)
-    })
+
+    
+    $('.main_gameban .g_con').slick({
+        arrows: false,
+        slidesToShow: 6,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+              }
+            },
+          ]
+    });
    
     $('.p_slide').slick({
         arrows: false,
@@ -53,28 +55,10 @@ $(function () {
         draggable: false,
     })
 
-    $('.main_product .p_bottom .itm01').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 0)
+    $('.main_product .p_bottom .btn').on('click', function () {
+        var idx = $(this).index();
+        $('.p_slide').slick('slickGoTo', idx)
     })
-    $('.main_product .p_bottom .itm02').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 1)
-    })
-    $('.main_product .p_bottom .itm03').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 2)
-    })
-    $('.main_product .p_bottom .itm04').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 3)
-    })
-    $('.main_product .p_bottom .itm05').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 4)
-    })
-    $('.main_product .p_bottom .itm06').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 5)
-    })
-    $('.main_product .p_bottom .itm07').on('click', function () {
-        $('.p_slide').slick('slickGoTo', 6)
-    })
-
 
     $('.l_slide').slick({
         arrows: false,
@@ -96,6 +80,16 @@ $(function () {
         centerPadding: '125px',
         slidesToShow: 3,
         dots: true,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 1,
+              }
+            },
+          ]
     })
 
     $('.main_lanews .ln_btn .left').on('click', function () {
@@ -103,5 +97,35 @@ $(function () {
     })
     $('.main_lanews .ln_btn .right').on('click', function () {
         $('.ln_slide').slick('slickNext')
+    });
+  
+    $('.p_bottom').slick({
+        arrows: false,
+        slidesToShow: 7,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                centerMode: true,
+                centerPadding: '100px',
+                slidesToShow: 1,
+              }
+            },
+          ]
+    });
+
+    // $('.main_launch .new .game_box').slick({
+    //     slidesToShow: 1,
+    //     responsive: [
+    //         {
+    //             breakpoint: 768,
+
+    //         }
+    //     ]
+
+    // })
+
+    $('.m_btn').on('click', function () {
+        $('.header .h_bottom nav').toggleClass('on');
     })
 })
