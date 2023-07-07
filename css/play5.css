@@ -242,6 +242,14 @@
     text-align: center;
 }
 
+.header .h_bottom .customer span {
+    cursor: pointer;
+}
+
+.header .h_bottom .customer i {
+    font-size: 20px;
+}
+
 .main_game .itm {
     height: calc(100vh - 250px);
     position: relative;
@@ -307,6 +315,20 @@
     background: rgba(255, 255, 255, 0.3);
 }
 
+.main_game .itm03 .txt strong::after {
+    content: "\ebb1";
+    font-family: xeicon;
+    position: absolute;
+    top: 0;
+    right: 56%;
+    transform: translate(0, 0);
+
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    z-index: 999;
+}
+
 .main_game .itm .txt h2 {
     font-size: 40px;
     font-weight: 400;
@@ -335,6 +357,32 @@
     border-radius: 50px;
 }
 
+.main_game .scroll {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    text-shadow:0 0 5px #7c7c7c;
+}
+
+.main_game .scroll .mouse {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.main_game .scroll span {
+    font-size: 10px;
+    font-weight: 300;
+    /* margin: 0 0 5px 0; */
+}
+
 .main_gameban {
     /* height: 150px; */
 }
@@ -356,6 +404,7 @@
     cursor: pointer;
     height: 100px;
     margin: 10px;
+
 }
 
 .main_gameban .g_con .con {
@@ -372,6 +421,8 @@
     width: 100%;
     height: 100%;
     border-radius: 25px;
+
+    cursor: pointer;
 }
 
 .main_product {
@@ -967,7 +1018,7 @@
 }
 
 .main_lanews .ln_slide .lanews .container img {
-    border-radius: 25px;
+    border-radius: 10px;
     margin: 0 0 30px 0;
 }
 
@@ -1435,7 +1486,7 @@
         width: 300px;
         height: 400px;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
